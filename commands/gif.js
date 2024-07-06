@@ -1,4 +1,3 @@
-const config = require("../config.json");
 const discord = require("discord.js");
 const axios = require("axios");
 
@@ -21,7 +20,7 @@ module.exports = {
 
     let url = `https://tenor.googleapis.com/v2/search?q=${encodeURIComponent(
       query
-    )}&key=${config.tenor_api_key}&limit=8`;
+    )}&key=${process.env.tenor_api_key}&limit=8`;
 
     axios
       .get(url)
