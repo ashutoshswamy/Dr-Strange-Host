@@ -1,4 +1,3 @@
-const config = require("./config.json");
 const { Routes } = require("discord.js");
 const { REST } = require("@discordjs/rest");
 const fs = require("node:fs");
@@ -21,7 +20,7 @@ const rest = new REST({
 }).setToken(config.bot_token);
 
 rest
-  .put(Routes.applicationCommands(config.client_id), {
+  .put(Routes.applicationCommands(process.env.client_id), {
     body: commands,
   })
   .then(() => {
