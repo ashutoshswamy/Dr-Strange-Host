@@ -57,7 +57,7 @@ module.exports = {
           `You did some fishing and caught **${amount} fish(es)**`
         )
         .setFooter({
-          text: "You can sell these by using the /sell function",
+          text: "You can sell these by using the /sell command",
         });
 
       await interaction.reply({
