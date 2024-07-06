@@ -13,7 +13,7 @@ module.exports = {
     const pingEmbed = new discord.EmbedBuilder()
       .setColor("Blurple")
       .setDescription(
-        `Websocket: **${client.ws.ping}**\nUptime: **${ms(client.uptime)}**`
+        `Websocket: **${client.ws.ping}ms**\nUptime: **${ms(client.uptime)}**`
       )
       .setTimestamp();
 
