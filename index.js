@@ -16,7 +16,7 @@ client.once("ready", () => {
   client.user.setActivity("with Slash commands");
 
   try {
-    mongoose.connect(config.mongodb_connection_uri);
+    mongoose.connect(process.env.mongodb_connection_uri);
     console.log("Connected to the MongoDB Database");
   } catch (err) {
     console.log(err);
