@@ -7,12 +7,6 @@ const schema = new mongoose.Schema({
     required: true,
   },
 
-  guildId: {
-    type: String,
-    unique: false,
-    required: true,
-  },
-
   wallet: {
     type: Number,
     default: 1000,

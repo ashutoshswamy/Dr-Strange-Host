@@ -44,13 +44,11 @@ module.exports = {
     try {
       data = await schema.findOne({
         userId: interaction.user.id,
-        guildId: interaction.guild.id,
       });
 
       if (!data) {
         data = await schema.create({
           userId: interaction.user.id,
-          guildId: interaction.guild.id,
         });
       }
     } catch (err) {
